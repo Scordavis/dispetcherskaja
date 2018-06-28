@@ -24,16 +24,16 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+	select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		background-image: url('../img/icon-plus.png')
+		background-repeat: no-repeat
+		background-position: 96% center
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
 
-.text-center
-	text-align: center
+
 
 b, strong
 	font-weight: bold
@@ -94,305 +94,98 @@ button
 	&--rounded
 		border-radius: 2px
 
-// .hamburger
-.hamburger
-	position: relative
-	width: 40px
-	height: 40px
-	border: 3px solid white
-	border-radius: 40px
-	z-index: 2
-	opacity: 1
-	&:hover
-		opacity: .8
-	&:focus
-		opacity: .8
-
-
-	&__wrapper
-		border: 2px solid white
-		border-radius: 100%
-
-	&__img
-	&__bar
-		display: block
-		width: 22px
-		height: 2px
-		border-radius: 1px
-		background-color: white
-
-
-
-// colors
-.green
-	color: $success
-
-// breadcrumbs
-.breadcrumb
-	padding: 0
-	font-size: 14px
-	background-color: transparent
-
-	&__link
-		color: $text
-
-	&-item /* not BAM cause its bootstrap class */
-		&:before
-			padding: 0!important
-
-		&.active
-			color: $attention
-			font-weight: 700
-			text-decoration: underline
-
-.cabinet-heading
-	margin-bottom: 28px
-	font-size: 24px
-	border-bottom: 4px solid lighten($text, 30%)
-	span
-		color: $attention
-
-
-// .nav
-.nav
-	height: 60px // перед продакшеном вернуть высоту 60px
-	background-color: $accent
-	background-image: url("../img/nav_pattern.png")
-	color: white
-
-	&__wrapper
-		height: 100%
-
-	&__content
-		height: 100%
-
-	&__link-wrapper
-	&__item
-	&__link
-		height: 100%
-		color: inherit
-		font-size: 18px
-		text-transform: uppercase
-		font-weight: 500
-
-	&__icon
-		margin-right: 10px
-
-	&__text
-		margin-bottom: 0
-		text-align: left
-		font-size: 14px
-		text-transform: uppercase
-
-		&--tel
-			// &:first-of-type
-			// 	&:before
-			// 		position: absolute
-			// 		left: -20px
-			// 		content: '\f098'
-			// 		font-family: FontAwesome
-
-		span
-			display: block
-			text-align: left
-			text-transform: none
-
-	// mobile nav
-	&__mobile
-		display: none
-
-.nav-dropdown
-	position: relative
-	width: 100%
-
-	&__button
-		&:hover
-			text-decoration: none
-
-
-	&__content
-		display: none
-		position: absolute
+	&--100
 		width: 100%
-		min-width: 300px
-		left: 0
-		right: 0
-		padding-left: 15px
-		padding-right: 15px
-		background-color: $accent
-		box-shadow: 0px 2px 8px fade-out($text, .4)
-		z-index: 4
 
-		&--form
-			min-width: 300px
-			background: transparent
-			box-shadow: none
+.divider
+	border-bottom: 1px solid $text
+
+
+// .app-header
+.app-header
+	background-color: $accent
+	color: white
+	&__title
+		text-transform: uppercase
+
+	&__row
+	&__top
+		border-bottom: 1px dashed white
 
 	&__item
-		display: block
-		padding: 2px 6px
-		text-align: left
-
-	&__form
-		max-width: 70%
-
-	&__form-button
+	&__button
 		position: relative
-		display: inline-block
-		width: auto
-		right: 30px
-		background-color: transparent
-		border: none
-		color: $accent
-		cursor: pointer
-		&:hover
-			color: $dark-blue
-
-// .header-page
-.header-page
-	margin-top: 20px
-	margin-bottom: 50px
-
-	&__text
-		margin-bottom: 0
-
-	&__link
-		color: $accent
-		text-decoration: underline
-
-// cabinet-content
-.cabinet-content
-
-// .user-settings
-.user-settings
-	&__ballance
-		margin-bottom: 38px
-		font-size: 24px
-		font-weight: 700
-
-	&__row
-		border-bottom: 1px solid darken(white, 8%)
-		&:last-of-type
-			border: none
-
-	&__label
-		margin-bottom: 0
-
-	&__button
-		width: auto
-		background-color: transparent
-		border: none
-		color: $accent
-		cursor: pointer
-		&:hover
-			color: $dark-blue
-
-
-	&__input
-		background-color: darken(white, 4%)
-		border-radius: 2px
-
-// .user-readings
-.user-readings
-	position: relative;
-	width: 100%;
-	outline: 0;
-	&__container
-
-	&__item
-		margin-bottom: 4px
-
-	&__button
-		position: relative;
-		display: block
-		width: 100%
-		margin-bottom: 0
-		padding-top: 15px
-		padding-bottom: 15px
+		width: 56px
+		height: 56px
 		background-color: $accent
-		border-radius: 4px
-		font-size: 24px
 		color: white
-		cursor: pointer
-		@include transition(.2s)
+		font-size: 22px
+		border: 1px solid white
+		border-radius: 50%
+		@include transition(.3s)
 
-		&:hover
-			background-color: darken($accent, 10%)
-			color: white
-			text-decoration: none
-
-		&.active
-			background-color: $dark-blue
-			color: white
-
-	&__content
-		display: none
-		padding: 14px 12px 16px
-		border: 2px solid $dark-blue
-		border-bottom-right-radius: 4px
-		border-bottom-left-radius: 4px
-
-	&__wrapper
-		width: 96%
-
-	&__row
-		border-bottom: 1px solid darken(white, 8%)
-	&__query
+	&__notify
+		position: absolute
+		top: 0
+		right: 0
+		width: 16px
+		height: 16px
+		font-size: 16px
+		line-height: 17px
 		font-weight: 400
+		font-style: normal
+		background-color: $attention
+		opacity: 0
+		border-radius: 100%
+		@include transition(.3s)
 
-	&__text
-		margin-bottom: 0
+		&--active
+			top: -20px
+			right: -10px
+			opacity: 1
+			@include transition(.3s)
 
-	&__value
-	&__input
-		background-color: darken(white, 4%)
+// .log-out
+.log-out
+	color: $yellow
+	font-size: 26px
 
-.user-readings__container .user-readings__item.open .user-readings__button
-	background-color: $dark-blue
-	color: white
-	border-bottom-right-radius: 0
-	border-bottom-left-radius: 0
-
-
-// .callback
-.callback
-	margin-bottom: 64px
-	&__description
-
-	&__img
-		height: 120px
-		max-height: 120px
-	&__text
-		line-height: 20px
-	&__form
-	&__textarea
-		margin-bottom: 12px
-		background-color: darken(white, 4%)
-		border-radius: 2px
-
-// .footer-page
-.footer-page
-	height: 130px
-	background-color: $accent
-	background-image: url("../img/nav_pattern.png")
-	color: white
+// .app-content
+.app-content
 	&__wrapper
-		height: 130px
-	&__item
-	&__text
-		margin-bottom: 12px
-		line-height: 20px
-		span
-			display: block
-		&--uppercase
-			font-weight: light
-			text-transform: uppercase
+		display: none
+		border-bottom: 1px solid $accent
 
+	&__data
+	&__request
+	&__date
+	&__adress
+	&__report
+	&__disclose
+		color: $accent
+		font-weight: bold
 
+	&__working
+		color: $attention
+		font-weight: bold
 
+	&__finish
+		color: $success
+		font-weight: bold
 
+	&__heading
+		font-weight: normal
 
+	&__selected
+		color: $accent
+		font-weight: bold
 
+// .app-footer
+.app-footer
+	display: block
+	min-height: 30px
+	height: 30px
+	background-color: $accent
 
 
 
